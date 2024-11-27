@@ -1,0 +1,47 @@
+{
+    	"layer": "top",
+    	"modules-left": ["hyprland/workspaces"],
+    	"modules-center": ["hyprland/window"],
+    	"modules-right": ["wireplumber","network","battery", "clock","custom/power"],
+    	"hyprland/window": {
+        	"max-length": 50
+    },
+
+	"wireplumber": {
+    		"format": "{volume}% {icon}",
+    		"format-muted": "󰝟",
+   		"on-click": "pavucontrol",
+		"on-click-right": "helvum", 
+ 		"format-icons": ["󰕿", "󰖀", "󰕾"]
+	},
+	"network": {
+		"interface": "wlp2s0", // (Optional) To force the use of this interface
+        	"format-wifi": "({signalStrength}%) 󰤨",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        	"format-disconnected": "Disconnected 󰤮",
+		"tooltip-format":"{essid}",
+		"interval" : 60,	
+		"on-click" : "kitty -e 'nmtui'",
+    },
+	"battery": {
+    		"interval": 60,
+    		"states": {
+        		"warning": 30,
+        		"critical": 15
+    			},
+    		"format": "{capacity}% {icon}",
+    		"format-icons": ["", "", "", "", ""],
+    		"max-length": 25,
+	},
+	"clock": {
+		"interval": 60,
+		"format": "{:%H:%M}",
+		"max-length": 25,
+		"tooltip-format": "{:%a %d %b %Y}",
+	},
+	"custom/power": {
+		"format":"󰐥",
+		"on-click": "exec ~/.config/waybar/scripts/wofi-power-menu",
+		"tooltip-format":"Çimene dokun.",
+	},
+}
