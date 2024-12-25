@@ -1,5 +1,8 @@
-Just Changes
+**Just Changes**
 
-mainFileManager = Thunar
-mainTerminal = Kitty
-$SUPER+F = Fullscreen
+
+*mainFileManager = Thunar*
+
+*mainTerminal = Kitty*
+
+*$SUPER+F = Fullscreen*
